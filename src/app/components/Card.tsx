@@ -11,7 +11,7 @@ interface Props {
 }
 export default function Card({ user }: Props) {
   return (
-    <div className="bg-[#08182E] p-4 rounded-2xl sm:flex">
+    <div className="bg-sky-600 dark:bg-[#08182E] p-4 rounded-2xl sm:flex shadow-box dark:shadow-none">
       <div className="w-24 h-24 rounded-full float-left mr-8 sm:float-none grid place-content-center overflow-hidden">
         <Image src={user.avatar_url} alt={user?.name || "sin datos"} width={96} height={96} />
       </div>
@@ -20,7 +20,7 @@ export default function Card({ user }: Props) {
           <div className="sm:flex sm:justify-between">
             <div className="mb-2 ">
               <h3 className="text-xl">{user.name}</h3>
-              <h4 className="text-sky-800 text-lg">{`@${user.login}`}</h4>
+              <h4 className="text-sky-900 dark:text-sky-800 text-lg">{`@${user.login}`}</h4>
             </div>
             <article className="font-light sm:max-w-[130px] text-sm">{`Joined ${new Date(
               user.created_at || ""
@@ -34,7 +34,7 @@ export default function Card({ user }: Props) {
             {user.bio || "This profile has no bio"}
           </p>
         </div>
-        <div className="flex gap-10 justify-around bg-[#070D19] rounded-xl p-4 text-center mb-4 sm:text-left">
+        <div className="flex gap-10 justify-around bg-sky-800 dark:bg-[#070D19] rounded-xl p-4 text-center mb-4 sm:text-left">
           <div>
             <h5 className="font-light">Repos</h5>
             <span>{user.public_repos}</span>

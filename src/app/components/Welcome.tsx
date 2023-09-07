@@ -3,7 +3,7 @@ import UpArrow from "./UpArrow";
 
 export default function Welcome() {
   return (
-    <div className="grid place-content-center bg-[#08182E] rounded-2xl p-6">
+    <div className="grid place-content-center bg-sky-600 dark:bg-[#08182E] rounded-2xl p-6 shadow-box dark:shadow-none">
       <div className="flex justify-center slideUp">
         <UpArrow  />
       </div>
@@ -14,7 +14,7 @@ export default function Welcome() {
           alt="Github logo"
           width={60}
           height={60}
-          className="invert"
+          className="dark:invert"
         />
       </div>
     </div>  );

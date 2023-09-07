@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: translateY(40px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .slideUp {
-    animation: myAnim 2s ease 0s infinite normal forwards;
+  animation: myAnim 2s ease 0s infinite normal forwards;
+}
+.shadow-box{
+  box-shadow:
+  16.6px 18.1px 53.6px -27px rgba(0, 0, 0, 0.235),
+  23.5px 25.6px 62.1px -27px rgba(0, 0, 0, 0.31),
+  55px 60px 129px -27px rgba(0, 0, 0, 0.61)
+;
 }

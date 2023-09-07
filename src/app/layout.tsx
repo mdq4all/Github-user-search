@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${mitr.className} h-screen w-full bg-[#070D19] grid place-content-center`}>{children}</body>
+    <html lang="en" className=''>
+      <body className={`${mitr.className} h-screen w-full bg-sky-100 dark:bg-[#070D19] grid place-content-center`}>{children}</body>
     </html>
   )
 }

@@ -13,7 +13,6 @@ export default function Home() {
 
   const getUser = async (username: string) => {
     const res = await fetch(`https://api.github.com/users/${username}`);
-    console.log(res);
     if (!res.ok) {
       setUser(null);
       setError("User does not exists");
@@ -21,16 +20,15 @@ export default function Home() {
     }
     setUser(await res.json());
     setError(null);
-    console.log(user);
   };
 
   return (
-    <div className=" text-white max-w-xl">
+    <div className=" text-black dark:text-white max-w-xl">
       <Header />
       <Searchbar getUser={getUser} />
       {user && <Card user={user} />}
       {error && (
-        <div className="grid place-content-center bg-red-600 p-6 rounded-xl">
+        <div className="grid place-content-center bg-red-600 p-6 rounded-xl shadow-box dark:shadow-none">
           <h3 className="text-white font-bold text-xl text-center">{error}</h3>
         </div>
       )}
