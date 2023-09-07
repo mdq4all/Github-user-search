@@ -7,7 +7,8 @@ export default function Searchbar({ getUser }: Props) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const username = e.currentTarget.username.value;
+    const username = e.currentTarget.username.value.trim();
+    console.log(username)
     if (!username) return;
     await getUser(username)
   };
